@@ -15,11 +15,13 @@ source .bash_profile
 Node Installation
 ```
 
-# Clone project repository
+**Clone project repository**
+```
 cd && rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain
 cd canine-chain
 git checkout v4.0.3
+```
 
 # Build binary
 make install
