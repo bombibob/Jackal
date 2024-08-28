@@ -23,10 +23,12 @@ cd canine-chain
 git checkout v4.0.3
 ```
 
-# Build binary
+**Build binary**
+```
 make install
+```
 
-# Set node CLI configuration
+**Set node CLI configuration**
 canined config chain-id jackal-1
 canined config keyring-backend file
 canined config node tcp://localhost:17557
