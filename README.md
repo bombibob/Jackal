@@ -29,12 +29,16 @@ make install
 ```
 
 **Set node CLI configuration**
+```
 canined config chain-id jackal-1
 canined config keyring-backend file
 canined config node tcp://localhost:17557
+```
 
-# Initialize the node
+**Initialize the node**
+```
 canined init "Your Node Name" --chain-id jackal-1
+```
 
 # Download genesis and addrbook files
 curl -L https://snapshots.nodejumper.io/jackal/genesis.json > $HOME/.canine/config/genesis.json
