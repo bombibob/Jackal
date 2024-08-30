@@ -40,11 +40,14 @@ canined config node tcp://localhost:17557
 canined init "Your Node Name" --chain-id jackal-1
 ```
 
-# Download genesis and addrbook files
+**Download genesis and addrbook files**
+```
 curl -L https://snapshots.nodejumper.io/jackal/genesis.json > $HOME/.canine/config/genesis.json
 curl -L https://snapshots.nodejumper.io/jackal/addrbook.json > $HOME/.canine/config/addrbook.json
+```
 
-# Set seeds
+**Set seeds**
+
 sed -i -e 's|^seeds *=.*|seeds = "20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:17556,ebc272824924ea1a27ea3183dd0b9ba713494f83@jackal-mainnet-seed.autostake.com:26906,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:17556,400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@jackal.rpc.kjnodes.com:13759,c28827cb96c14c905b127b92065a3fb4cd77d7f6@seeds.whispernode.com:17556,8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,0ab9ec918cd36a28be1fcf538f7f76ede2b81659@89.58.38.59:26656,ebc272824924ea1a27ea3183dd0b9ba713494f83@jackal-mainnet-peer.autostake.com:26906,26b6255375a592c3b0664bd474a6975f468c3785@jkl.peer.stavr.tech:11126,713d202326eedaed41d467b26051aba62727febd@5.9.69.241:26656"|' $HOME/.canine/config/config.toml
 
 # Set minimum gas price
