@@ -55,12 +55,14 @@ sed -i -e 's|^seeds *=.*|seeds = "20e1000e88125698264454a884812746c2eb4807@seeds
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.002ujkl"|' $HOME/.canine/config/app.toml
 ```
 
-# Set pruning
+**Set pruning**
+```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.canine/config/app.toml
+```
 
 # Change ports
 sed -i -e "s%:1317%:17517%; s%:8080%:17580%; s%:9090%:17590%; s%:9091%:17591%; s%:8545%:17545%; s%:8546%:17546%; s%:6065%:17565%" $HOME/.canine/config/app.toml
