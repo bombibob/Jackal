@@ -72,8 +72,10 @@ sed -i -e "s%:1317%:17517%; s%:8080%:17580%; s%:9090%:17590%; s%:9091%:17591%; s
 sed -i -e "s%:26658%:17558%; s%:26657%:17557%; s%:6060%:17560%; s%:26656%:17556%; s%:26660%:17561%" $HOME/.canine/config/config.toml
 ```
 
-# Download latest chain data snapshot
+**Download latest chain data snapshot**
+```
 curl "https://snapshots.nodejumper.io/jackal/jackal_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.canine"
+```
 
 # Create a service
 sudo tee /etc/systemd/system/canined.service > /dev/null << EOF
