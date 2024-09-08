@@ -77,7 +77,8 @@ sed -i -e "s%:26658%:17558%; s%:26657%:17557%; s%:6060%:17560%; s%:26656%:17556%
 curl "https://snapshots.nodejumper.io/jackal/jackal_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.canine"
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/canined.service > /dev/null << EOF
 [Unit]
 Description=Jackal node service
@@ -93,6 +94,7 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable canined.service
+```
 
 # Start the service and check the logs
 sudo systemctl start canined.service
